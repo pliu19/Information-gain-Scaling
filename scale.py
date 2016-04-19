@@ -9,26 +9,16 @@ class decision_tree_scale():
         pass
 
     def fit_transform(self, X, y, axis = 0):
-        # m is # of instances.
 
         X = np.asarray(X)
         y = np.asarray(y)
-
-        # if X.ndim == 1:
-        #
-        #     n = np.shape(X)[0]
-        #     m = 1
-        #
-        # else:
-        #
-        #     m, n = np.shape(X)
 
         m, n = np.shape(X)
 
         m = float(m)
 
         y = 1.0 * y
-        # print set(y)
+
         feature_split_value = []
 
         self.count_entropy_larger = []
